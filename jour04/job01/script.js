@@ -1,23 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
+let t_Button = document.getElementById("button");
 
-    const button = document.getElementById("button");
-    const resultDiv = document.getElementById("result");
-
-    button.addEventListener("click", function() {
-
-        fetch("expression.txt")
-            .then(response => response.text())  
-            .then(text => {
-                const paragraph = document.createElement("p");
-                paragraph.textContent = text;
-
-                resultDiv.innerHTML = ""; 
-                resultDiv.appendChild(paragraph);
-            })
-            .catch(error => {
-                resultDiv.innerHTML = "<p style='color:red;'>Erreur : Fichier introuvable !</p>";
-                console.error(error);
-            });
-
-    });
+t_Button.addEventListener("click", function() {
+    fetch("expression.txt")
+        .then((response) => response.text())
+        
+        .then((data) => {
+            let new_h1 = document.createElement("h1");
+            new_h1.textContent = data;
+            document.body.appendChild(new_h1);
+        })
+        
 });

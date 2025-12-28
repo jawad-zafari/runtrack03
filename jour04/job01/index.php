@@ -8,9 +8,7 @@
 <body>
 
     <button id="button">Afficher</button>
-
-    <div id="result"></div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
