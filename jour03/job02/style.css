@@ -1,0 +1,15 @@
+.container {
+            border: 2px solid gray;
+            min-height: 200px; 
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex; 
+        }
+        
+        img {
+            width: 200px; 
+            height: 200px;
+            border: 1px solid black;
+            cursor: pointer; 
+            margin: 2px;
+        }
