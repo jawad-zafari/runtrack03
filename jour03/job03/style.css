@@ -1,0 +1,33 @@
+body { display: flex; flex-direction: column; align-items: center; background: #f0f0f0; font-family: sans-serif; }
+        
+        #game-board {
+            width: 300px;  
+            height: 300px; 
+            border: 5px solid #333;
+            display: flex; 
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        .tile {
+            width: 98px; 
+            height: 98px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: orange; 
+        }
+
+        .empty {
+            background-color: #333 !important; 
+            cursor: default; 
+            border: 1px solid #333;
+        }
+
+        #message { margin-top: 20px; font-size: 20px; font-weight: bold; }
+        
+        #restart-btn { display: none; margin-top: 10px; padding: 10px 20px; cursor: pointer; }
