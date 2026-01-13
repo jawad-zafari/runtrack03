@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>job03</title>
+</head>
+<body>
+
+    <header>
+        <nav class="indigo accent-4">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">La Plateforme</a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html">Inscription</a></li>
+                    <li><a href="index.html">Connexion</a></li>
+                    <li><a href="index.html">Rechercher</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <h1>Formulaire de création de compte</h1>
+        
+        <form action="#">
+            <label>Civilité :</label><br>
+            <label>
+                <input name="civilite" type="radio" value="homme" />
+                <span>Homme</span>
+            </label>
+            <label>
+                <input name="civilite" type="radio" value="femme" />
+                <span>Femme</span>
+            </label>
+            <br><br>
+
+            <label for="prenom">Prénom :</label><br>
+            <input type="text" id="prenom" name="prenom">
+            <br><br>
+
+            <label for="nom">Nom :</label><br>
+            <input type="text" id="nom" name="nom">
+            <br><br>
+
+            <label for="adresse">Adresse :</label><br>
+            <input type="text" id="adresse" name="adresse">
+            <br><br>
+
+            <label for="email">Email :</label><br>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <label for="password">Mot de passe :</label><br>
+            <input type="password" id="password" name="password">
+            <br><br>
+
+            <label for="confirm_password">Confirmation du mot de passe :</label><br>
+            <input type="password" id="confirm_password" name="confirm_password">
+            <br><br>
+
+            <label>Passions :</label><br>
+            <label>
+                <input type="checkbox" name="passion" value="informatique" />
+                <span>Informatique</span>
+            </label><br>
+            <label>
+                <input type="checkbox" name="passion" value="voyages" />
+                <span>Voyages</span>
+            </label><br>
+            <label>
+                <input type="checkbox" name="passion" value="sport" />
+                <span>Sport</span>
+            </label><br>
+            <label>
+                <input type="checkbox" name="passion" value="lecture" />
+                <span>Lecture</span>
+            </label><br>
+            <br>
+
+            <button class="btn indigo accent-4" type="submit">Valider
+            </button>
+        </form>
+    </section>
+
+    <footer class="page-footer indigo accent-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 s12">
+                    <h5 class="white-text">Liens utiles</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Accueil</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Inscription</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Connexion</a></li>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Rechercher</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            © 2026 La Plateforme
+            <a class="grey-text text-lighten-4 right" href="#!">Plus d'infos</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
