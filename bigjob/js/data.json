@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "jawad@laplateforme.io",
+      "password": "123",
+      "role": "student",
+      "name": "Jawad zafari"
+    },
+    {
+      "id": 2,
+      "email": "pierre@laplateforme.io",
+      "password": "123",
+      "role": "moderator",
+      "name": "Pierre"
+    },
+    {
+      "id": 3,
+      "email": "admin@laplateforme.io",
+      "password": "123",
+      "role": "admin",
+      "name": "Big Boss"
+    }
+  ]
+}

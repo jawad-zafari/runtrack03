@@ -1,0 +1,122 @@
+
+body {
+    background-color: #2d2dcb; 
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.msg-success {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+}
+
+
+.status-accepted {
+    color: #2e7d32 !important;
+    font-weight: bold;
+}
+
+.status-refused {
+    color: #c62828 !important;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ef6c00 !important;
+    font-weight: bold;
+}
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+
+#calendar-page, #admin-page {
+    display: none;
+    width: 90%;
+    max-width: 800px; 
+}
+
+
+.calendar-container {
+    display: flex;      
+    flex-wrap: wrap;     
+    gap: 10px;           
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.day-card {
+    width: 80px;         
+    height: 80px;        
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;    
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    -webkit-user-select: none;
+    user-select: none; 
+}
+
+.day-card:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-color: #2196f3;
+}
+
+
+.day-card.selected {
+    background-color: #ff7700 !important; 
+    color: white !important;
+    border-color: #ffffff;
+    transform: scale(1.05);
+}
+#admin-controls {
+    display:none; 
+    margin: 20px auto; 
+    background: #ffffff; 
+    padding: 15px; 
+    border-radius: 8px;
+}
+
+.day-card.disabled {
+    background-color: #eeeeee; 
+    color: #bdbdbd;
+    cursor: not-allowed;
+    pointer-events: none; 
+}
+
+#toast-container {
+    top: 50% !important;           
+    left: 50% !important;          
+    right: auto !important;        
+    bottom: auto !important;       
+    transform: translate(-50%, -50%) !important; 
+    min-width: 150px !important;            
+    text-align: center;            
+}
+
+.toast {
+    background-color: #ffffff;
+    border-radius: 25px;       
+    font-size: 1.1rem;  
+    color: #1100ff;           
+    }
+
+
+

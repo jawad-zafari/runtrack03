@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Plateforme - Connexion</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div id="login-page" class="container">
+        <div class="card login-card z-depth-3">
+            <div class="card-content center-align">
+                <h4 class="blue-text text-darken-2">La Plateforme_</h4>
+                <p>Connexion à l'espace étudiant</p>
+                <br>
+
+                <div class="row">
+                    <form class="col s12">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email (@laplateforme.io)</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Mot de passe</label>
+                        </div>
+
+                        <div class="col s12">
+                            <br>
+                            <button class="btn-large waves-effect waves-light blue darken-2" type="button" onclick="loginUser()">
+                                Se connecter
+                            </button>
+                        </div>
+
+                        <div class="col s12">
+                            <p id="error-msg" class="red-text" style="display:none; margin-top:10px;"></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="calendar-page">
+        
+        <div class="row" style="margin-top: 20px;">
+            <div class="col s12 m8">
+                <h4 class="blue-text white-text">Mon Calendrier</h4>
+                <p class="white-text">Sélectionnez les jours où vous serez présent.</p>
+            </div>
+            <div class="col s12 m4 right-align">
+                <button class="btn red waves-effect waves-light" onclick="logout()">
+                    Déconnexion
+                    <i class="material-icons right">exit_to_app</i>
+                </button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="calendar-grid" class="calendar-container"></div>
+
+        <div class="row center-align" style="margin-top: 30px;">
+            <button class="btn-large waves-effect waves-light orange darken-1" onclick="submitPresence()">
+                Valider mes choix
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </div>
+
+<div id="admin-page" style="display:none;">
+        
+        <div class="row" style="margin-top: 20px;">
+            <div class="col s12 m8">
+                <h4 class="orange-text white-text">Panneau d'administration</h4>
+                <p class="white-text">Gérer les demandes de présence.</p> </div>
+            <div class="col s12 m4 right-align">
+                <button class="btn red waves-effect waves-light" onclick="logout()">
+                    Déconnexion
+                    <i class="material-icons right">exit_to_app</i>
+                </button>
+            </div>
+        </div>
+
+        <div id="admin-controls" class="container center-align" >
+            <h5 class="blue-text text-darken-4">Zone Administrateur</h5>
+            <p class="blue-text text-darken-4">Gérer les droits des utilisateurs (Ajouter/Supprimer Modérateurs)</p>
+            <button class="btn blue darken-2 waves-effect waves-light" onclick="manageUsers()">
+                Gérer les utilisateurs
+                <i class="material-icons right">group_add</i>
+            </button>
+        </div>
+        <hr>
+
+        <div class="container admin-container">
+            <table class="highlight centered responsive-table white-text">
+                <thead>
+                    <tr>
+                        <th>Nom de l'étudiant</th> 
+                        <th>Email</th>
+                        <th>Jours demandés</th> 
+                        <th>Statut</th> 
+                        <th>Actions</th> 
+                    </tr>
+                </thead>
+
+                <tbody id="requests-table-body">
+                    </tbody>
+            </table>
+            
+            <p id="no-requests-msg" class="center-align grey-text" style="display:none;">
+                Aucune demande en attente. </p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
