@@ -1,0 +1,37 @@
+body {
+            text-align: center;
+            background-color: #0099ff; 
+        }
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        .tab-content {
+            padding: 20px;
+        }
+.tabs .tab a {
+        color: #3a8df9 !important; 
+        font-weight: bolder;
+    }
+
+    .tabs .tab a:hover {
+        background-color: #7fcdf122  !important;
+    }
+
+    .tabs .tab a.active {
+        color: #ffffff !important; 
+        font-weight: bold;
+        background-color: #009dff  !important;
+        border-radius: 3px; 
+    }
+
+    .tabs .indicator {
+        background-color: #ffcc00 !important; 
+    }
+    #timerInput{
+        font-size: 2rem; text-align: center; width: 100px;
+    }
+        

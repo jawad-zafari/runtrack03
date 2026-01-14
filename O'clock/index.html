@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'clock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h3 class="blue-text">O'clock</h3>
+
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a class="active" href="#horloge">Horloge</a></li>
+                    <li class="tab col s3"><a href="#reveil">Réveil</a></li>
+                    <li class="tab col s3"><a href="#chronometre">Chrono</a></li>
+                    <li class="tab col s3"><a href="#minuteur">Minuteur</a></li>
+                </ul>
+            </div>
+
+            <div id="horloge" class="col s12 tab-content orange-text">
+                <h5>Heure actuelle</h5>
+                <h1 id="screen-horloge">00:00:00</h1>
+            </div>
+
+            <div id="reveil" class="col s12 tab-content">
+                <h4 class="blue-text">Réveil</h4>
+                
+                <p>Choisissez l'heure de l'alarme :</p>
+                <div class="input-field inline">
+                    <input id="alarm-input" type="time" placeholder="HH:MM">
+                </div>
+                <br><br>
+
+                <p id="alarm-status" class="grey-text">Pas d'alarme active</p>
+                <br>
+
+                <button id="btn-alarm-set" class="btn green waves-effect waves-light">
+                    Activer
+                    <i class="material-icons right">alarm_on</i>
+                </button>
+
+                <button id="btn-alarm-cancel" class="btn red waves-effect waves-light disabled">
+                    Désactiver
+                    <i class="material-icons right">alarm_off</i>
+                </button>
+            </div>
+
+           <div id="chronometre" class="col s12 tab-content">
+                <h4 class="blue-text">Chronomètre</h4>
+
+                <h1 id="chrono-screen" class="red-text">00:00:00</h1>
+
+                <div class="row">
+                    <button id="btn-chrono-toggle" class="btn-large waves-effect waves-light green">
+                        Démarrer
+                        <i class="material-icons right">play_arrow</i>
+                    </button>
+
+                    <button id="btn-chrono-lap" class="btn-large waves-effect waves-light orange">
+                        Tour
+                        <i class="material-icons right">flag</i>
+                    </button>
+
+                    <button id="btn-chrono-reset" class="btn-large waves-effect waves-light grey">
+                        Reset
+                        <i class="material-icons right">replay</i>
+                    </button>
+                </div>
+
+                <div class="row">
+                    <div class="col s6 offset-s3">
+                        <h4 class="blue-text">Tours enregistrés</h4>
+                        <ul id="laps-list" class="collection ">
+                            <li class="collection-header blue-text"></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+           <div id="minuteur" class="col s12 tab-content">
+                <h4 class="blue-text">Minuteur</h4>
+                
+                <p>Entrez le temps en secondes :</p>
+                
+                <div class="input-field inline">
+                    <input class="orange-text"  type="number" id="timerInput"  value="10" placeholder="Secondes">
+                    <span class="helper-text">Secondes</span>
+                </div>
+                <br><br>
+
+                <button id="btn-timer-start" class="btn green waves-effect waves-light">
+                    Démarrer
+                    <i class="material-icons right">play_arrow</i>
+                </button>
+
+                <button id="btn-timer-stop" class="btn red waves-effect waves-light">
+                    Arrêter
+                    <i class="material-icons right">stop</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src = "script.js"></script>
+    <script src = "script2.js"></script>
+</body>
+</html>
